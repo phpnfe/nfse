@@ -1,4 +1,4 @@
 /vendor
+/.vscode
 .env
 composer.lock
-/tests/*
