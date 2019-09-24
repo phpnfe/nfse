@@ -33,13 +33,15 @@ class Config
                     'method' => 'EnvioRPS',
                     'op' => 'PedidoEnvioRPS',
                     'versao' => '1',
-                    'url' => 'https://nfse.blumenau.sc.gov.br/ws/lotenfe.asmx?wsdl',
+                    'url' => 'http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc?wsdl',
+                    //'url' => 'https://nfse.blumenau.sc.gov.br/ws/lotenfe.asmx?wsdl',
                 ],
                 self::mtCancela => [
                     'method' => 'CancelamentoNFe',
                     'op' => 'PedidoCancelamentoNFe',
                     'versao' => '1',
-                    'url' => 'https://nfse.blumenau.sc.gov.br/ws/lotenfe.asmx?wsdl',
+                    'url' => 'http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc?wsdl',
+                    //'url' => 'https://nfse.blumenau.sc.gov.br/ws/lotenfe.asmx?wsdl',
                 ],
             ],
             self::ambHomologacao => [
