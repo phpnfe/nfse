@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 $app = new \Symfony\Component\Console\Application('NetForce NFSe Tests', '1.0.0');
 
 // Adicionar os testes BNU - SC
-$app->add(new \Tests\BlumenauTest());
+//$app->add(new \Tests\BlumenauTest());
 
 // Adicionar os testes BC - SC
 $app->add(new \Tests\SC_BC_Autorizar_Test());
