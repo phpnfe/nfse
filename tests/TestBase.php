@@ -1,6 +1,7 @@
 <?php namespace Tests;
 
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -58,5 +59,17 @@ abstract class TestBase extends Command
     protected function info($str)
     {
         $this->output->writeln($str);
+    }
+
+    /**
+     * Fazer pergunta para o console.
+     */
+    protected function ask($question, $default = null)
+    {
+        $helper = $this->getHelper('question');
+
+        $question = new Question($question . ': ', $default);
+
+        return $helper->ask($this->input, $this->output, $question);        
     }
 }
