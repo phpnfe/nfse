@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions name="NfseService" targetNamespace="http://www.sistema.com.br/Sistema.Ws.Nfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.sistema.com.br/Sistema.Ws.Nfse" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+	<types>
+		<schema elementFormDefault="qualified" targetNamespace="http://www.sistema.com.br/Sistema.Ws.Nfse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://www.abrasf.org.br/nfse.xsd" />
+			<element name="Versao">
+				<complexType />
+			</element>
+			<element name="VersaoResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="VersaoResult" type="xs:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="RecepcionarLoteRps">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="EnviarLoteRpsEnvio" type="q1:EnviarLoteRpsEnvio" xmlns:q1="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="RecepcionarLoteRpsResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="RecepcionarLoteRpsResult" type="q2:EnviarLoteRpsResposta" xmlns:q2="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="GerarNfse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="GerarNfseEnvio" type="q3:GerarNfseEnvio" xmlns:q3="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="GerarNfseResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="GerarNfseResult" type="q4:GerarNfseResposta" xmlns:q4="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="CancelarNfse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="CancelarNfseEnvio" type="q5:CancelarNfseEnvio" xmlns:q5="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="CancelarNfseResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="CancelarNfseResult" type="q6:CancelarNfseResposta" xmlns:q6="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarLoteRps">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarLoteRpsEnvio" type="q7:ConsultarLoteRpsEnvio" xmlns:q7="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarLoteRpsResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarLoteRpsResult" type="q8:ConsultarLoteRpsResposta" xmlns:q8="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseRps">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseRpsEnvio" type="q9:ConsultarNfseRpsEnvio" xmlns:q9="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseRpsResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseRpsResult" type="q10:ConsultarNfseRpsResposta" xmlns:q10="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseServicoPrestado">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseServicoPrestadoEnvio" type="q11:ConsultarNfseServicoPrestadoEnvio" xmlns:q11="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseServicoPrestadoResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseServicoPrestadoResult" type="q12:ConsultarNfseServicoPrestadoResposta" xmlns:q12="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseServicoTomado">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseServicoTomadoEnvio" type="q13:ConsultarNfseServicoTomadoEnvio" xmlns:q13="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseServicoTomadoResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseServicoTomadoResult" type="q14:ConsultarNfseServicoTomadoResposta" xmlns:q14="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseFaixa">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseFaixaEnvio" type="q15:ConsultarNfseFaixaEnvio" xmlns:q15="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ConsultarNfseFaixaResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" maxOccurs="1" name="ConsultarNfseFaixaResult" type="q16:ConsultarNfseFaixaResposta" xmlns:q16="http://www.abrasf.org.br/nfse.xsd" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+		<schema elementFormDefault="qualified" targetNamespace="http://www.abrasf.org.br/nfse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.abrasf.org.br/nfse.xsd">
+			<import namespace="http://www.w3.org/2000/09/xmldsig#" />
+			<complexType name="EnviarLoteRpsEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="LoteRps" type="tns:tcLoteRps" />
+					<element minOccurs="0" maxOccurs="1" ref="q1:Signature" xmlns:q1="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="tcLoteRps">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="NumeroLote" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="QuantidadeRps" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="ListaRps" type="tns:ArrayOfTcDeclaracaoPrestacaoServico" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+				<attribute name="versao" type="xs:token" />
+			</complexType>
+			<complexType name="tcCpfCnpj">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="Cnpj" type="xs:string" />
+						<element minOccurs="0" maxOccurs="1" name="Cpf" type="xs:string" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfTcDeclaracaoPrestacaoServico">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Rps" type="tns:tcDeclaracaoPrestacaoServico" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDeclaracaoPrestacaoServico">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="InfDeclaracaoPrestacaoServico" type="tns:tcInfDeclaracaoPrestacaoServico" />
+					<element minOccurs="0" maxOccurs="1" ref="q2:Signature" xmlns:q2="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="tcInfDeclaracaoPrestacaoServico">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Rps" type="tns:tcInfRps" />
+					<element minOccurs="1" maxOccurs="1" name="Competencia" type="xs:date" />
+					<element minOccurs="0" maxOccurs="1" name="Servico" type="tns:tcDadosServico" />
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="Tomador" type="tns:tcDadosTomador" />
+					<element minOccurs="0" maxOccurs="1" name="Intermediario" type="tns:tcDadosIntermediario" />
+					<element minOccurs="0" maxOccurs="1" name="ConstrucaoCivil" type="tns:tcDadosConstrucaoCivil" />
+					<element minOccurs="0" maxOccurs="1" name="RegimeEspecialTributacao" type="xs:byte" />
+					<element minOccurs="1" maxOccurs="1" name="OptanteSimplesNacional" type="xs:byte" />
+					<element minOccurs="1" maxOccurs="1" name="IncentivoFiscal" type="xs:byte" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="tcInfRps">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoRps" type="tns:tcIdentificacaoRps" />
+					<element minOccurs="1" maxOccurs="1" name="DataEmissao" type="xs:date" />
+					<element minOccurs="1" maxOccurs="1" name="Status" type="xs:byte" />
+					<element minOccurs="0" maxOccurs="1" name="RpsSubstituido" type="tns:tcIdentificacaoRps" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="tcIdentificacaoRps">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="Serie" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="Tipo" type="xs:byte" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDadosServico">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Valores" type="tns:tcValoresDeclaracaoServico" />
+					<element minOccurs="1" maxOccurs="1" name="IssRetido" type="xs:byte" />
+					<element minOccurs="0" maxOccurs="1" name="ResponsavelRetencao" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="ItemListaServico" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoCnae" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoTributacaoMunicipio" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoNbs" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Discriminacao" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoMunicipio" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoPais" type="xs:int" />
+					<element minOccurs="1" maxOccurs="1" name="ExigibilidadeISS" type="xs:byte" />
+					<element minOccurs="0" maxOccurs="1" name="MunicipioIncidencia" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="NumeroProcesso" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcValoresDeclaracaoServico">
+				<sequence>
+					<element minOccurs="1" maxOccurs="1" name="ValorServicos" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorDeducoes" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorPis" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorCofins" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorInss" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorIr" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorCsll" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="OutrasRetencoes" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValTotTributos" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorIss" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="Aliquota" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="DescontoIncondicionado" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="DescontoCondicionado" type="xs:decimal" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentificacaoPrestador">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDadosTomador">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoTomador" type="tns:tcIdentificacaoTomador" />
+					<element minOccurs="0" maxOccurs="1" name="NifTomador" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="RazaoSocial" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Endereco" type="tns:tcEndereco" />
+					<element minOccurs="0" maxOccurs="1" name="Contato" type="tns:tcContato" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentificacaoTomador">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcEndereco">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Endereco" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Numero" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Complemento" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Bairro" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoMunicipio" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="Uf" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoPais" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="Cep" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcContato">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Telefone" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDadosIntermediario">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoIntermediario" type="tns:tcIdentificacaoIntermediario" />
+					<element minOccurs="0" maxOccurs="1" name="RazaoSocial" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="CodigoMunicipio" type="xs:int" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentificacaoIntermediario">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDadosConstrucaoCivil">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CodigoObra" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Art" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="EnviarLoteRpsResposta">
+				<sequence>
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element minOccurs="1" maxOccurs="1" name="DataRecebimento" type="xs:dateTime" />
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="NumeroLote" type="xs:nonNegativeInteger" />
+						<element minOccurs="0" maxOccurs="1" name="Protocolo" type="xs:string" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="tcMensagemRetorno">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Mensagem" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Correcao" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="GerarNfseEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Rps" type="tns:tcDeclaracaoPrestacaoServico" />
+				</sequence>
+			</complexType>
+			<complexType name="GerarNfseResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="NovaNfse" type="tns:tcRespostaIdentNovaNfse" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="tcRespostaIdentNovaNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoNfse" type="tns:tcIdentNovaNfse" />
+					<element minOccurs="0" maxOccurs="1" ref="q3:Signature" xmlns:q3="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentNovaNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoPrestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="Serie" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoVerificacao" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="DataEmissao" type="xs:dateTime" />
+					<element minOccurs="0" maxOccurs="1" name="Link" type="xs:string" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="CancelarNfseEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Pedido" type="tns:tcPedidoCancelamento" />
+				</sequence>
+			</complexType>
+			<complexType name="tcPedidoCancelamento">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="InfPedidoCancelamento" type="tns:tcInfPedidoCancelamento" />
+					<element minOccurs="0" maxOccurs="1" ref="q4:Signature" xmlns:q4="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="tcInfPedidoCancelamento">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoNfse" type="tns:tcIdentificacaoNfse" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoCancelamento" type="xs:string" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="tcIdentificacaoNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="CodigoMunicipio" type="xs:int" />
+				</sequence>
+			</complexType>
+			<complexType name="CancelarNfseResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="Cancelamento" type="tns:tcCancelamentoNfse" />
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="tcCancelamentoNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Confirmacao" type="tns:tcConfirmacaoCancelamento" />
+					<element minOccurs="0" maxOccurs="1" ref="q5:Signature" xmlns:q5="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+				<attribute name="versao" type="xs:token" />
+			</complexType>
+			<complexType name="tcConfirmacaoCancelamento">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Pedido" type="tns:tcPedidoCancelamento" />
+					<element minOccurs="1" maxOccurs="1" name="DataHoraCancelamento" type="xs:dateTime" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="ConsultarLoteRpsEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="Protocolo" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" ref="q6:Signature" xmlns:q6="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarLoteRpsResposta">
+				<sequence>
+					<element minOccurs="1" maxOccurs="1" name="Situacao" type="xs:byte" />
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetornoLote">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetornoLote" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="ListaNfse">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="tcMensagemRetornoLote">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoRps" type="tns:tcIdentificacaoRps" />
+					<element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Mensagem" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcCompNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Nfse" type="tns:tcNfse" />
+					<element minOccurs="0" maxOccurs="1" name="NfseCancelamento" type="tns:tcCancelamentoNfse" />
+					<element minOccurs="0" maxOccurs="1" name="NfseSubstituicao" type="tns:tcSubstituicaoNfse" />
+				</sequence>
+			</complexType>
+			<complexType name="tcNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="InfNfse" type="tns:tcInfNfse" />
+					<element minOccurs="0" maxOccurs="1" ref="q7:Signature" xmlns:q7="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+				<attribute name="versao" type="xs:token" />
+			</complexType>
+			<complexType name="tcInfNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="CodigoVerificacao" type="xs:string" />
+					<element minOccurs="1" maxOccurs="1" name="DataEmissao" type="xs:dateTime" />
+					<element minOccurs="0" maxOccurs="1" name="NfseSubstituida" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" name="OutrasInformacoes" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="ValoresNfse" type="tns:tcValoresNfse" />
+					<element minOccurs="0" maxOccurs="1" name="ValorCredito" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcDadosPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="OrgaoGerador" type="tns:tcIdentificacaoOrgaoGerador" />
+					<element minOccurs="0" maxOccurs="1" name="DeclaracaoPrestacaoServico" type="tns:tcDeclaracaoPrestacaoServico" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="tcValoresNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="BaseCalculo" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="Aliquota" type="xs:decimal" />
+					<element minOccurs="0" maxOccurs="1" name="ValorIss" type="xs:decimal" />
+					<element minOccurs="1" maxOccurs="1" name="ValorLiquidoNfse" type="xs:decimal" />
+				</sequence>
+			</complexType>
+			<complexType name="tcDadosPrestador">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoPrestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="RazaoSocial" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="NomeFantasia" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="Endereco" type="tns:tcEndereco" />
+					<element minOccurs="0" maxOccurs="1" name="Contato" type="tns:tcContato" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentificacaoOrgaoGerador">
+				<sequence>
+					<element minOccurs="1" maxOccurs="1" name="CodigoMunicipio" type="xs:int" />
+					<element minOccurs="0" maxOccurs="1" name="Uf" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="tcSubstituicaoNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="SubstituicaoNfse" type="tns:tcInfSubstituicaoNfse" />
+					<element minOccurs="0" maxOccurs="unbounded" ref="q8:Signature" xmlns:q8="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+				<attribute name="versao" type="xs:token" />
+			</complexType>
+			<complexType name="tcInfSubstituicaoNfse">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="NfseSubstituidora" type="xs:nonNegativeInteger" />
+				</sequence>
+				<attribute name="Id" type="xs:string" />
+			</complexType>
+			<complexType name="ConsultarNfseRpsEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="IdentificacaoRps" type="tns:tcIdentificacaoRps" />
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" ref="q9:Signature" xmlns:q9="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseRpsResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="CompNfse" type="tns:tcCompNfse" />
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseServicoPrestadoEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="NumeroNfse" type="xs:nonNegativeInteger" />
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="PeriodoCompetencia">
+							<complexType>
+								<sequence>
+									<element minOccurs="1" maxOccurs="1" name="DataInicial" type="xs:date" />
+									<element minOccurs="1" maxOccurs="1" name="DataFinal" type="xs:date" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="PeriodoEmissao">
+							<complexType>
+								<sequence>
+									<element minOccurs="1" maxOccurs="1" name="DataInicial" type="xs:date" />
+									<element minOccurs="1" maxOccurs="1" name="DataFinal" type="xs:date" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+					<element minOccurs="0" maxOccurs="1" name="Tomador" type="tns:tcIdentificacaoTomador" />
+					<element minOccurs="0" maxOccurs="1" name="Intermediario" type="tns:tcIdentificacaoIntermediario" />
+					<element minOccurs="0" maxOccurs="1" name="Pagina" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" ref="q10:Signature" xmlns:q10="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseServicoPrestadoResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="ListaNfse">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse" />
+									<element minOccurs="0" maxOccurs="1" name="ProximaPagina" type="xs:nonNegativeInteger" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseServicoTomadoEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Consulente" type="tns:tcIdentificacaoConsulente" />
+					<element minOccurs="0" maxOccurs="1" name="NumeroNfse" type="xs:nonNegativeInteger" />
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="PeriodoCompetencia">
+							<complexType>
+								<sequence>
+									<element minOccurs="1" maxOccurs="1" name="DataInicial" type="xs:date" />
+									<element minOccurs="1" maxOccurs="1" name="DataFinal" type="xs:date" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="PeriodoEmissao">
+							<complexType>
+								<sequence>
+									<element minOccurs="1" maxOccurs="1" name="DataInicial" type="xs:date" />
+									<element minOccurs="1" maxOccurs="1" name="DataFinal" type="xs:date" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="Tomador" type="tns:tcIdentificacaoTomador" />
+					<element minOccurs="0" maxOccurs="1" name="Intermediario" type="tns:tcIdentificacaoIntermediario" />
+					<element minOccurs="0" maxOccurs="1" name="Pagina" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" ref="q11:Signature" xmlns:q11="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="tcIdentificacaoConsulente">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj" />
+					<element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="xs:string" />
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseServicoTomadoResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="ListaNfse">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse" />
+									<element minOccurs="0" maxOccurs="1" name="ProximaPagina" type="xs:nonNegativeInteger" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseFaixaEnvio">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador" />
+					<element minOccurs="0" maxOccurs="1" name="Faixa">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="1" name="NumeroNfseInicial" type="xs:nonNegativeInteger" />
+								<element minOccurs="0" maxOccurs="1" name="NumeroNfseFinal" type="xs:nonNegativeInteger" />
+							</sequence>
+						</complexType>
+					</element>
+					<element minOccurs="0" maxOccurs="1" name="Pagina" type="xs:nonNegativeInteger" />
+					<element minOccurs="0" maxOccurs="1" ref="q12:Signature" xmlns:q12="http://www.w3.org/2000/09/xmldsig#" />
+				</sequence>
+			</complexType>
+			<complexType name="ConsultarNfseFaixaResposta">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno" />
+								</sequence>
+							</complexType>
+						</element>
+						<element minOccurs="0" maxOccurs="1" name="ListaNfse">
+							<complexType>
+								<sequence>
+									<element minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse" />
+									<element minOccurs="0" maxOccurs="1" name="ProximaPagina" type="xs:nonNegativeInteger" />
+								</sequence>
+							</complexType>
+						</element>
+					</choice>
+				</sequence>
+			</complexType>
+		</schema>
+		<schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2000/09/xmldsig#">
+			<element name="Signature" type="tns:SignatureType" />
+			<complexType name="SignatureType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="SignedInfo" type="tns:SignedInfoType" />
+					<element minOccurs="0" maxOccurs="1" name="SignatureValue" type="tns:SignatureValueType" />
+					<element minOccurs="0" maxOccurs="1" name="KeyInfo" type="tns:KeyInfoType" />
+					<element minOccurs="0" maxOccurs="unbounded" name="Object" type="tns:ObjectType" />
+				</sequence>
+				<attribute name="Id" type="xs:ID" />
+			</complexType>
+			<complexType name="SignedInfoType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="CanonicalizationMethod" type="tns:CanonicalizationMethodType" />
+					<element minOccurs="0" maxOccurs="1" name="SignatureMethod" type="tns:SignatureMethodType" />
+					<element minOccurs="0" maxOccurs="unbounded" name="Reference" type="tns:ReferenceType" />
+				</sequence>
+				<attribute name="Id" type="xs:ID" />
+			</complexType>
+			<complexType name="CanonicalizationMethodType" mixed="true">
+				<sequence>
+					<any minOccurs="0" maxOccurs="unbounded" />
+				</sequence>
+				<attribute name="Algorithm" type="xs:anyURI" />
+			</complexType>
+			<complexType name="SignatureMethodType" mixed="true">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="HMACOutputLength" type="xs:integer" />
+					<any minOccurs="0" maxOccurs="unbounded" />
+				</sequence>
+				<attribute name="Algorithm" type="xs:anyURI" />
+			</complexType>
+			<complexType name="ReferenceType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Transforms" type="tns:ArrayOfTransformType" />
+					<element minOccurs="0" maxOccurs="1" name="DigestMethod" type="tns:DigestMethodType" />
+					<element minOccurs="0" maxOccurs="1" name="DigestValue" type="xs:base64Binary" />
+				</sequence>
+				<attribute name="Id" type="xs:ID" />
+				<attribute name="URI" type="xs:anyURI" />
+				<attribute name="Type" type="xs:anyURI" />
+			</complexType>
+			<complexType name="ArrayOfTransformType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Transform" type="tns:TransformType" />
+				</sequence>
+			</complexType>
+			<complexType name="TransformType" mixed="true">
+				<sequence>
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element minOccurs="0" maxOccurs="1" name="XPath" type="xs:string" />
+						<any minOccurs="0" maxOccurs="1" />
+					</choice>
+				</sequence>
+				<attribute name="Algorithm" type="xs:anyURI" />
+			</complexType>
+			<complexType name="DigestMethodType" mixed="true">
+				<sequence>
+					<any minOccurs="0" maxOccurs="unbounded" />
+				</sequence>
+				<attribute name="Algorithm" type="xs:anyURI" />
+			</complexType>
+			<complexType name="SignatureValueType">
+				<simpleContent>
+					<extension base="xs:base64Binary">
+						<attribute name="Id" type="xs:ID" />
+					</extension>
+				</simpleContent>
+			</complexType>
+			<complexType name="KeyInfoType" mixed="true">
+				<sequence>
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element minOccurs="0" maxOccurs="1" name="KeyName" type="xs:string" />
+						<element minOccurs="0" maxOccurs="1" name="KeyValue" type="tns:KeyValueType" />
+						<element minOccurs="0" maxOccurs="1" name="MgmtData" type="xs:string" />
+						<element minOccurs="0" maxOccurs="1" name="PGPData" type="tns:PGPDataType" />
+						<element minOccurs="0" maxOccurs="1" name="RetrievalMethod" type="tns:RetrievalMethodType" />
+						<element minOccurs="0" maxOccurs="1" name="SPKIData" type="tns:SPKIDataType" />
+						<element minOccurs="0" maxOccurs="1" name="X509Data" type="tns:X509DataType" />
+						<any minOccurs="0" maxOccurs="1" />
+					</choice>
+				</sequence>
+				<attribute name="Id" type="xs:ID" />
+			</complexType>
+			<complexType name="KeyValueType" mixed="true">
+				<sequence>
+					<choice minOccurs="1" maxOccurs="1">
+						<element minOccurs="0" maxOccurs="1" name="DSAKeyValue" type="tns:DSAKeyValueType" />
+						<element minOccurs="0" maxOccurs="1" name="RSAKeyValue" type="tns:RSAKeyValueType" />
+						<any minOccurs="0" maxOccurs="1" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="DSAKeyValueType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="P" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="Q" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="G" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="Y" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="J" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="Seed" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="PgenCounter" type="xs:base64Binary" />
+				</sequence>
+			</complexType>
+			<complexType name="RSAKeyValueType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Modulus" type="xs:base64Binary" />
+					<element minOccurs="0" maxOccurs="1" name="Exponent" type="xs:base64Binary" />
+				</sequence>
+			</complexType>
+			<complexType name="PGPDataType">
+				<sequence>
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element minOccurs="0" maxOccurs="1" name="PGPKeyID" type="xs:base64Binary" />
+						<element minOccurs="0" maxOccurs="1" name="PGPKeyPacket" type="xs:base64Binary" />
+						<any minOccurs="0" maxOccurs="1" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="RetrievalMethodType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="Transforms" type="tns:ArrayOfTransformType" />
+				</sequence>
+				<attribute name="URI" type="xs:anyURI" />
+				<attribute name="Type" type="xs:anyURI" />
+			</complexType>
+			<complexType name="SPKIDataType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="SPKISexp" type="xs:base64Binary" />
+					<any minOccurs="0" maxOccurs="1" />
+				</sequence>
+			</complexType>
+			<complexType name="X509DataType">
+				<sequence>
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element minOccurs="0" maxOccurs="1" name="X509CRL" type="xs:base64Binary" />
+						<element minOccurs="0" maxOccurs="1" name="X509Certificate" type="xs:base64Binary" />
+						<element minOccurs="0" maxOccurs="1" name="X509IssuerSerial" type="tns:X509IssuerSerialType" />
+						<element minOccurs="0" maxOccurs="1" name="X509SKI" type="xs:base64Binary" />
+						<element minOccurs="0" maxOccurs="1" name="X509SubjectName" type="xs:string" />
+						<any minOccurs="0" maxOccurs="1" />
+					</choice>
+				</sequence>
+			</complexType>
+			<complexType name="X509IssuerSerialType">
+				<sequence>
+					<element minOccurs="0" maxOccurs="1" name="X509IssuerName" type="xs:string" />
+					<element minOccurs="0" maxOccurs="1" name="X509SerialNumber" type="xs:integer" />
+				</sequence>
+			</complexType>
+			<complexType name="ObjectType" mixed="true">
+				<sequence>
+					<any minOccurs="0" maxOccurs="unbounded" />
+				</sequence>
+				<attribute name="Id" type="xs:ID" />
+				<attribute name="MimeType" type="xs:string" />
+				<attribute name="Encoding" type="xs:anyURI" />
+			</complexType>
+		</schema>
+	</types>
+	<message name="INfseService_Versao_InputMessage">
+		<part name="parameters" element="tns:Versao" />
+	</message>
+	<message name="INfseService_Versao_OutputMessage">
+		<part name="parameters" element="tns:VersaoResponse" />
+	</message>
+	<message name="INfseService_RecepcionarLoteRps_InputMessage">
+		<part name="parameters" element="tns:RecepcionarLoteRps" />
+	</message>
+	<message name="INfseService_RecepcionarLoteRps_OutputMessage">
+		<part name="parameters" element="tns:RecepcionarLoteRpsResponse" />
+	</message>
+	<message name="INfseService_GerarNfse_InputMessage">
+		<part name="parameters" element="tns:GerarNfse" />
+	</message>
+	<message name="INfseService_GerarNfse_OutputMessage">
+		<part name="parameters" element="tns:GerarNfseResponse" />
+	</message>
+	<message name="INfseService_CancelarNfse_InputMessage">
+		<part name="parameters" element="tns:CancelarNfse" />
+	</message>
+	<message name="INfseService_CancelarNfse_OutputMessage">
+		<part name="parameters" element="tns:CancelarNfseResponse" />
+	</message>
+	<message name="INfseService_ConsultarLoteRps_InputMessage">
+		<part name="parameters" element="tns:ConsultarLoteRps" />
+	</message>
+	<message name="INfseService_ConsultarLoteRps_OutputMessage">
+		<part name="parameters" element="tns:ConsultarLoteRpsResponse" />
+	</message>
+	<message name="INfseService_ConsultarNfseRps_InputMessage">
+		<part name="parameters" element="tns:ConsultarNfseRps" />
+	</message>
+	<message name="INfseService_ConsultarNfseRps_OutputMessage">
+		<part name="parameters" element="tns:ConsultarNfseRpsResponse" />
+	</message>
+	<message name="INfseService_ConsultarNfseServicoPrestado_InputMessage">
+		<part name="parameters" element="tns:ConsultarNfseServicoPrestado" />
+	</message>
+	<message name="INfseService_ConsultarNfseServicoPrestado_OutputMessage">
+		<part name="parameters" element="tns:ConsultarNfseServicoPrestadoResponse" />
+	</message>
+	<message name="INfseService_ConsultarNfseServicoTomado_InputMessage">
+		<part name="parameters" element="tns:ConsultarNfseServicoTomado" />
+	</message>
+	<message name="INfseService_ConsultarNfseServicoTomado_OutputMessage">
+		<part name="parameters" element="tns:ConsultarNfseServicoTomadoResponse" />
+	</message>
+	<message name="INfseService_ConsultarNfseFaixa_InputMessage">
+		<part name="parameters" element="tns:ConsultarNfseFaixa" />
+	</message>
+	<message name="INfseService_ConsultarNfseFaixa_OutputMessage">
+		<part name="parameters" element="tns:ConsultarNfseFaixaResponse" />
+	</message>
+	<portType name="INfseService">
+		<operation name="Versao">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/Versao" message="tns:INfseService_Versao_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/VersaoResponse" message="tns:INfseService_Versao_OutputMessage" />
+		</operation>
+		<operation name="RecepcionarLoteRps">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRps" message="tns:INfseService_RecepcionarLoteRps_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRpsResponse" message="tns:INfseService_RecepcionarLoteRps_OutputMessage" />
+		</operation>
+		<operation name="GerarNfse">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfse" message="tns:INfseService_GerarNfse_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfseResponse" message="tns:INfseService_GerarNfse_OutputMessage" />
+		</operation>
+		<operation name="CancelarNfse">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfse" message="tns:INfseService_CancelarNfse_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfseResponse" message="tns:INfseService_CancelarNfse_OutputMessage" />
+		</operation>
+		<operation name="ConsultarLoteRps">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRps" message="tns:INfseService_ConsultarLoteRps_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRpsResponse" message="tns:INfseService_ConsultarLoteRps_OutputMessage" />
+		</operation>
+		<operation name="ConsultarNfseRps">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseRps" message="tns:INfseService_ConsultarNfseRps_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseRpsResponse" message="tns:INfseService_ConsultarNfseRps_OutputMessage" />
+		</operation>
+		<operation name="ConsultarNfseServicoPrestado">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoPrestado" message="tns:INfseService_ConsultarNfseServicoPrestado_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoPrestadoResponse" message="tns:INfseService_ConsultarNfseServicoPrestado_OutputMessage" />
+		</operation>
+		<operation name="ConsultarNfseServicoTomado">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoTomado" message="tns:INfseService_ConsultarNfseServicoTomado_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoTomadoResponse" message="tns:INfseService_ConsultarNfseServicoTomado_OutputMessage" />
+		</operation>
+		<operation name="ConsultarNfseFaixa">
+			<input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseFaixa" message="tns:INfseService_ConsultarNfseFaixa_InputMessage" />
+			<output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseFaixaResponse" message="tns:INfseService_ConsultarNfseFaixa_OutputMessage" />
+		</operation>
+	</portType>
+	<binding name="BasicHttpBinding_INfseService" type="tns:INfseService">
+		<binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="Versao">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/Versao" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="RecepcionarLoteRps">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRps" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="GerarNfse">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfse" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="CancelarNfse">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfse" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="ConsultarLoteRps">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRps" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="ConsultarNfseRps">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseRps" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="ConsultarNfseServicoPrestado">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoPrestado" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="ConsultarNfseServicoTomado">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseServicoTomado" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+		<operation name="ConsultarNfseFaixa">
+			<operation soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseFaixa" style="document" />
+			<input>
+				<body use="literal" />
+			</input>
+			<output>
+				<body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="NfseService">
+		<port name="BasicHttpBinding_INfseService" binding="tns:BasicHttpBinding_INfseService">
+			<address location="http://wshomologacaoabrasf.simplissweb.com.br/nfseservice.svc" />
+		</port>
+	</service>
+</definitions>
