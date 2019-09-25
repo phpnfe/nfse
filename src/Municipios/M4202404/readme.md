@@ -12,3 +12,7 @@
 
  - Portal: https://nfse.blumenau.sc.gov.br/contrib/Account/Login
  - WSDL: http://wsblumenau.simplissweb.com.br/nfseservice.svc?wsdl
+
+## Colaboradores
+
+ - Bruno Gonçalves

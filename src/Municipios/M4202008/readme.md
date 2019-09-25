@@ -12,3 +12,7 @@
 
  - Portal: https://balneariocamboriu.simplissweb.com.br/contrib/Account/Login
  - WSDL: http://wsbalneariocamboriu.simplissweb.com.br/nfseservice.svc
+ 
+## Colaboradores
+
+ - Bruno Gonçalves
