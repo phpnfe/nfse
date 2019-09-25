@@ -3,19 +3,19 @@
 use PhpNFe\NFSe\NFSe;
 use PhpNFe\NFSe\Contracts\NfseProviderInterface;
 
-class SC_BC_Autorizar_Test extends TestBase
+class SC_BNU_Autorizar_Test extends TestBase
 {
     /**
      * Nome do test
      * @var string
      */
-    protected static $defaultName = 'bc:autorizar';
+    protected static $defaultName = 'bnu:autorizar';
 
     /**
      * Descricao do test
      * @var string
      */
-    protected $description = 'Autorizar uma RPS para Balneario Camboriu - SC';
+    protected $description = 'Autorizar uma RPS para Blumenau - SC';
 
     /**
      * Execuar teste.
@@ -23,7 +23,7 @@ class SC_BC_Autorizar_Test extends TestBase
     protected function handle()
     {
         // Carregar a empresa de bnu
-        $empresa = require __DIR__ . '/config_sc_bc.php';
+        $empresa = require __DIR__ . '/config_sc_bnu.php';
 
         // Validar certificado
         if (! $empresa->getCert()->ehValido()) {
@@ -31,7 +31,7 @@ class SC_BC_Autorizar_Test extends TestBase
         }
 
         // Gerar rps
-        $rps = require __DIR__ . '/rps/rps_sc_bc_cristoluz.php';
+        $rps = require __DIR__ . '/rps/rps_sc_bnu_netforce.php';
 
         // Carregar NFSE
         $nfse = new NFSe($empresa);
@@ -43,7 +43,7 @@ class SC_BC_Autorizar_Test extends TestBase
         }  
         
         $xml = $ret->getXmlProt();
-        file_put_contents(__DIR__ . '/outs/ret_sc_bc_autorizar.xml', $xml);                
+        file_put_contents(__DIR__ . '/outs/ret_sc_bnu_autorizar.xml', $xml);                
 
         $this->info('NFSe - AUTORIZADA');
     }
