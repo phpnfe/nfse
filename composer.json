@@ -18,9 +18,19 @@
         "besimple/soap-client" : "0.2.*@dev"
     },
 
+    "require-dev": {
+        "symfony/console": "~3.2"
+    },
+
     "autoload"         : {
         "psr-4": {
             "PhpNFe\\NFSe\\": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
 
