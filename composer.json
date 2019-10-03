@@ -11,11 +11,11 @@
     ],
 
     "require"          : {
-        "nesbot/carbon"        : "1.*",
-        "illuminate/filesystem": "5.2.*",
-        "phpnfe/tools"         : "2.0.*",
-        "dompdf/dompdf"        : "0.6.*",
-        "besimple/soap-client" : "0.2.*@dev"
+        "nesbot/carbon"          : "1.*",
+        "illuminate/filesystem"  : "5.2.*",
+        "phpnfe/tools"           : "2.0.*",
+        "dompdf/dompdf"          : "0.6.*",
+        "besimple/soap-client"   : "0.2.*@dev"
     },
 
     "require-dev": {

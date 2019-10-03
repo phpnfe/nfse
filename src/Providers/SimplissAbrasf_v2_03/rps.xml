@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GerarNfseEnvio>
+    <InformacaoNfse>
+        <Competencia>2019-09-24</Competencia>
+        <IncentivadorCultural>2</IncentivadorCultural>
+        <NaturezaOperacao>1</NaturezaOperacao>
+        <OptanteSimplesNacional>1</OptanteSimplesNacional>
+        <Servico>
+            <CodigoMunicipio>4202404</CodigoMunicipio>
+            <CodigoTributacaoMunicipio>101</CodigoTributacaoMunicipio>
+            <Discriminacao>TESTE RPS</Discriminacao>
+            <ItemListaServico>101</ItemListaServico>
+            <ItensServico>
+                <Descricao>TESTE RPS</Descricao>
+                <IssTributavel>1</IssTributavel>
+                <Quantidade>1</Quantidade>
+                <ValorUnitario>10</ValorUnitario>
+            </ItensServico>
+            <Valores>
+                <Aliquota>3</Aliquota>
+                <BaseCalculo>10</BaseCalculo>
+                <IssRetido>2</IssRetido>
+                <ValorCofins>0</ValorCofins>
+                <ValorCsll>0</ValorCsll>
+                <ValorInss>0</ValorInss>
+                <ValorIr>0</ValorIr>
+                <ValorIss>0.3</ValorIss>
+                <ValorIssRetido>0</ValorIssRetido>
+                <ValorLiquidoNfse>10</ValorLiquidoNfse>
+                <ValorPis>0</ValorPis>
+                <ValorServicos>10</ValorServicos>
+            </Valores>
+        </Servico>
+        <Status>1</Status>
+        <Tomador>
+            <Contato>
+                <Email>bugotech@gmail.com</Email>
+            </Contato>
+            <Endereco>
+                <Bairro>PASSO MANSO</Bairro>
+                <Cep>89032300</Cep>
+                <CodigoMunicipio>4202404</CodigoMunicipio>
+                <Complemento>BLOCO 4 AP 304</Complemento>
+                <Endereco>RUA GUILHERME POERNER</Endereco>
+                <Numero>1855</Numero>
+                <Uf>SC</Uf>
+            </Endereco>
+            <IdentificacaoTomador>
+                <CpfCnpj>
+                    <Cpf>00852036965</Cpf>
+                </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>BRUNO GONCALVES</RazaoSocial>
+        </Tomador>
+    </InformacaoNfse>
+    <Prestador>
+        <Cnpj>08729008000103</Cnpj>
+        <InscricaoMunicipal>80890</InscricaoMunicipal>
+    </Prestador>
+</GerarNfseEnvio>

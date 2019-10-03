@@ -1,0 +1,106 @@
+<GerarNfseEnvio
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.abrasf.org.br/nfse.xsd">
+    <Rps>
+        <InfDeclaracaoPrestacaoServico Id="R1">
+            <Rps Id="R1004">
+                <IdentificacaoRps>
+                    <Numero></Numero>
+                    <Serie></Serie>
+                    <Tipo></Tipo>
+                </IdentificacaoRps>
+                <DataEmissao></DataEmissao>
+                <Status></Status>
+            </Rps>
+            <Competencia></Competencia>
+            <Servico>
+                <Valores>
+                    <ValorServicos>100</ValorServicos>
+                    <ValorDeducoes>0</ValorDeducoes>
+                    <ValorPis>0</ValorPis>
+                    <ValorCofins>0</ValorCofins>
+                    <ValorInss>0</ValorInss>
+                    <ValorIr>0</ValorIr>
+                    <ValorCsll>0</ValorCsll>
+                    <ValorIss>2.00</ValorIss>
+                    <ValorIssRetido>2.00</ValorIssRetido>
+                    <ValorTotalTributos>0</ValorTotalTributos>
+                    <OutrasRetencoes>0</OutrasRetencoes>
+                    <BaseCalculo>100</BaseCalculo>
+                    <Aliquota>2.0000</Aliquota>
+                    <ValorLiquidoNfse>98</ValorLiquidoNfse>
+                    <DescontoIncondicionado>0</DescontoIncondicionado>
+                    <DescontoCondicionado>0</DescontoCondicionado>
+                    <ValorCredito>0</ValorCredito>
+                </Valores>
+                <IssRetido>1</IssRetido>
+                <ResponsavelRetencao>0</ResponsavelRetencao>
+                <ItemListaServico>1.01</ItemListaServico>
+                <CodigoTributacaoMunicipio>1.01</CodigoTributacaoMunicipio>
+                <CodigoCnae></CodigoCnae>
+                <CodigoNBS></CodigoNBS>
+                <Discriminacao>Teste Emissao Assinatura</Discriminacao>
+                <CodigoMunicipio></CodigoMunicipio>
+                <CodigoPais></CodigoPais>
+                <ExigibilidadeISS>1</ExigibilidadeISS>
+                <MunicipioIncidencia></MunicipioIncidencia>
+                <NumeroProcesso>55</NumeroProcesso>
+            </Servico>
+            <Prestador>
+                <CpfCnpj>
+                    <Cnpj></Cnpj>
+                </CpfCnpj>
+                <InscricaoMunicipal></InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+                <IdentificacaoTomador>
+                    <CpfCnpj>
+                        <Cnpj></Cnpj>
+                    </CpfCnpj>
+                    <InscricaoMunicipal></InscricaoMunicipal>
+                    <InscricaoEstadual>6218</InscricaoEstadual>
+                </IdentificacaoTomador>
+                <RazaoSocial></RazaoSocial>
+                <Endereco>
+                    <Endereco></Endereco>
+                    <Numero></Numero>
+                    <Complemento></Complemento>
+                    <Bairro></Bairro>
+                    <Uf></Uf>
+                    <CodigoMunicipio></CodigoMunicipio>
+                    <CodigoPais></CodigoPais>
+                    <Cep></Cep>
+                </Endereco>
+                <Contato>
+                    <Telefone></Telefone>
+                    <Email></Email>
+                </Contato>
+            </Tomador>
+            <RegimeEspecialTributacao>7</RegimeEspecialTributacao>
+            <OptanteSimplesNacional>2</OptanteSimplesNacional>
+            <IncentivoFiscal>1</IncentivoFiscal>
+        </InfDeclaracaoPrestacaoServico>
+        <Signature
+            xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+                <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+                <Reference URI="#R1">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                    <DigestValue>Tegcp9x6H0xDTuZNCBkx3mhCIq0=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>eVfF99626KYSw2s5VRI0Ob3XAE579VlZyamrFp+kJgi/siMCByRMWCGfT4gD4i5C2RUsk/AwCcTLquFM3Pfl3e4lBmyyeqwb4Z66ZUWwWQtjw0RalzwTsNfBGGTxOio5pRYwRAd9kvvs0Brlg4O9wMwStlmF1yv24qyfhk9qfhrsvEJdEBReW0PppCGPEklz/1rBqZVujaF2cpIpRCoU2SeyRpj2H+7S+OYrMCqx1OLpKmgizEUHQQsMQIPyCDpblFA0PioztfXN1sw0fh7kGS9L+n4DprEcSOVre+fCISs2JzcZhz6uPFOg67KPMridoXwDP5JM4kjKvcPsl+DJRw==</SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>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</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </Rps>
+</GerarNfseEnvio>

@@ -1,0 +1,68 @@
+{
+    "GerarNfseEnvio": {
+        "Rps": {
+            "Prestador": {
+                "Cnpj": "08729008000103",
+                "InscricaoMunicipal": "80890"
+            },
+            "InformacaoNfse": {
+                "NaturezaOperacao": "1",
+                "OptanteSimplesNacional": "1",
+                "IncentivadorCultural": "2",
+                "Status": "1",
+                "Competencia": "2019-09-24",
+                "Servico": {
+                    "Valores": {
+                        "ValorServicos": 10,
+                        "ValorPis": 0,
+                        "ValorCofins": 0,
+                        "ValorInss": 0,
+                        "ValorIr": 0,
+                        "ValorCsll": 0,
+                        "IssRetido": "2",
+                        "ValorIss": 0.3,
+                        "ValorIssRetido": 0,
+                        "BaseCalculo": 10,
+                        "Aliquota": 3,
+                        "ValorLiquidoNfse": 10
+                    },
+                    "CodigoMunicipio": "4202404",
+                    "ItemListaServico": "101",
+                    "CodigoTributacaoMunicipio": "101",
+                    "Discriminacao": "TESTE RPS",
+                    "ItensServico": {
+                        "Descricao": "TESTE RPS",
+                        "Quantidade": 1,
+                        "ValorUnitario": 10,
+                        "IssTributavel": "1"
+                    }
+                },
+                "Tomador": {
+                    "IdentificacaoTomador": {
+                        "CpfCnpj": {
+                            "Cpf": "00852036965"
+                        }
+                    },
+                    "RazaoSocial": "BRUNO GONCALVES",
+                    "Endereco": {
+                        "Endereco": "RUA GUILHERME POERNER",
+                        "Numero": "1855",
+                        "Complemento": "BLOCO 4 AP 304",
+                        "Bairro": "PASSO MANSO",
+                        "CodigoMunicipio": "4202404",
+                        "Uf": "SC",
+                        "Cep": "89032300"
+                    },
+                    "Contato": {
+                        "Telefone": null,
+                        "Email": "bugotech@gmail.com"
+                    }
+                }
+            }
+        },
+        "pParam": {
+            "P1": "08729008000103",
+            "P2": "19861986"
+        }
+    }
+}
