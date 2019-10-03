@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new \Symfony\Component\Console\Application('NetForce NFSe Tests', '1.0.0');
+
+$app->add(new \Tests\ValidarCertificadoTest());
+$app->add(new \Tests\ValidarXML());
+
+// Adicionar os testes BNU - SC
+$app->add(new \Tests\SC_BNU_Autorizar_Test());
+
+// Adicionar os testes BC - SC
+$app->add(new \Tests\SC_BC_Autorizar_Test());
+$app->add(new \Tests\SC_BC_Cancelar_Test());
+
+$app->run();

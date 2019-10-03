@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Passe o mouse para ver as descrições dos atributos existentes.
+    // Para obter mais informações, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "validar:certificado",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/test",
+            "cwd": "${workspaceFolder}",
+            "port": 9000,
+            "args": ["validar:certificado"]
+        },
+        {
+            "name": "bc:autorizar",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/test",
+            "cwd": "${workspaceFolder}",
+            "port": 9000,
+            "args": ["bc:autorizar"]
+        },
+        {
+            "name": "bc:cancelar",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/test",
+            "cwd": "${workspaceFolder}",
+            "port": 9000,
+            "args": ["bc:cancelar", "23"]
+        },
+        {
+            "name": "bnu:autorizar",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/test",
+            "cwd": "${workspaceFolder}",
+            "port": 9000,
+            "args": ["bnu:autorizar"]
+        },
+    ]
+}
